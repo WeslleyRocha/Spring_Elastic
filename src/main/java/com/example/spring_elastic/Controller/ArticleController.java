@@ -20,6 +20,11 @@ public class ArticleController {
 		return ResponseEntity.ok(service.save(article));
 	}
 
+	@PutMapping("/{id}")
+	public ResponseEntity<Article> update(@RequestBody Article article){
+		return ResponseEntity.ok(service.update(article));
+	}
+
 	@GetMapping("/{id}")
 	public ResponseEntity<Article> findById(@PathVariable int id){
 		return ResponseEntity.ok(service.findById(id));

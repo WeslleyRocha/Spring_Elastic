@@ -42,4 +42,9 @@ public class ArticleService  implements IArticleService{
 		repo.deleteById(id);
 		return "Removido com Sucesso!"; //Retorno para o delete "opcional"
 	}
+
+	@Override
+	public Article update(Article article) {
+		return repo.save(article);
+	}
 }

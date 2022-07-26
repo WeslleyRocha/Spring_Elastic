@@ -14,4 +14,5 @@ public interface IArticleService {
 
 	String deletebyId(int id); //Um retnoro diferente para o delete
 
+	Article update(Article article);//metodo de update
 }
