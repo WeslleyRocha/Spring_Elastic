@@ -1,5 +1,5 @@
-# Spring Elastic
-API consumindo bando de dados noSQL ElasticSearch.
+# Spring ElasticSearch
+API de estudo, consumindo bando de dados noSQL ElasticSearch.
 
 
 - **Endpoints**
