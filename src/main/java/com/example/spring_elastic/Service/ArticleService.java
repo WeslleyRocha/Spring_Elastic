@@ -28,13 +28,14 @@ public class ArticleService  implements IArticleService{
 
 	@Override
 	public List<Article> findAll() {
-		List<Article> list = new ArrayList<>(); //Article é uma lista de Article
+//		List<Article> list = new ArrayList<>(); //Article é uma lista de Article
+//
+//		Iterable<Article> resp = repo.findAll();//esta devolvendo um iterable e não uma lista
+//
+//		resp.forEach(list::add);//Para cada item ele chama o metodo ADD para adicionar a lista
+//		return list;
 
-		Iterable<Article> resp = repo.findAll();//esta devolvendo um iterable e não uma lista
-
-		resp.forEach(list::add);//Para cada item ele chama o metodo ADD para adicionar a lista
-
-		return list;
+		return  repo.findAllArticles(); // modo 2 de fazer o findAll
 	}
 
 	@Override
