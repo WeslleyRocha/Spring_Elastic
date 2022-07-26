@@ -17,11 +17,11 @@ public class Article {
 	@Id
 	private int id;
 
-	//Podemos alterar o nome do campo do banco / tipo de valor que ele vai receber
+	//Podemos alterar o nome do campo do banco / FieldType: tipo do valor que o campo vai receber
 	@Field(name = "title", type = FieldType.Text)
 	private String title;
 
-	//Indica que este campo veio d eoutra classe, e vai persistir a informacao
+	//Indica que este campo veio de outra classe, e vai persistir a informacao
 	@Field(type = FieldType.Nested, includeInParent = true)
 	private List<Author> authors;
 }

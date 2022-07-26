@@ -8,14 +8,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class ArticleService  implements IArticleService{
 
-	//Implementacao do IArticleService
+	//Implementação do IArticleService
 
 	@Autowired
-	private ArticleRepo repo; //Injecao de dependencia por atributos.
+	private ArticleRepo repo; //Injeção de dependência por atributos.
 
 	@Override
 	public Article save(Article article) {
-		return repo.save(article); // execulta o save do repositorio
+		return repo.save(article); // execulta o save do repositório
 	}
 
 	@Override

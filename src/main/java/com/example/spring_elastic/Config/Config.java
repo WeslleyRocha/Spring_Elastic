@@ -18,9 +18,9 @@ public class Config {
 	public RestHighLevelClient client(){
 		ClientConfiguration clientConfiguration = ClientConfiguration.builder()
 				.connectedTo("localhost:9200")
-				//.withBasicAuth("elastic","SENHA AQUI") "usuario e senha"
-				.withConnectTimeout(10000)
-				.withSocketTimeout(10000)// tempo de respota apos a solicitacao
+				//.withBasicAuth("elastic","SENHA AQUI") usuario e senha do servidor "elastic"
+				.withConnectTimeout(10000) // tempo limite para conexão com servidor
+				.withSocketTimeout(10000)// tempo de resposta após a solicitação
 				.build();
 		return RestClients.create(clientConfiguration).rest();
 	}
