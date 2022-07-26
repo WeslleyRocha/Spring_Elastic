@@ -3,9 +3,10 @@ package com.example.spring_elastic.Service;
 import com.example.spring_elastic.Model.Article;
 import com.example.spring_elastic.Repository.ArticleRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -39,7 +40,7 @@ public class ArticleService  implements IArticleService{
 	}
 
 	@Override
-	public String deletebyId(int id) {
+	public String deleteById(int id) {
 		repo.deleteById(id);
 		return "Removido com Sucesso!"; //Retorno para o delete "opcional"
 	}
@@ -47,5 +48,10 @@ public class ArticleService  implements IArticleService{
 	@Override
 	public Article update(Article article) {
 		return repo.save(article);
+	}
+
+	@Override
+	public Page<Article> getPageByTitle(String title, Pageable pg) {
+		return repo.findByTitle(title, pg); //Retorno do titulo e pg
 	}
 }

@@ -1,6 +1,8 @@
 package com.example.spring_elastic.Service;
 
 import com.example.spring_elastic.Model.Article;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
@@ -12,7 +14,10 @@ public interface IArticleService {
 
 	List<Article> findAll();
 
-	String deletebyId(int id); //Um retnoro diferente para o delete
+	String deleteById(int id); //Um retnoro diferente para o delete
 
 	Article update(Article article);//metodo de update
+
+	Page<Article> getPageByTitle(String title, Pageable pg);//Metodo de fazer a paginacao
+
 }
