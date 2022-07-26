@@ -10,12 +10,14 @@ import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
 import org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate;
 import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories;
 
-@Configuration
-@EnableElasticsearchRepositories(basePackages = "com.example.spring_elastic.Repository")
+
+@Configuration//Drizer ao Spring que esta classe é de configuração.
+@EnableElasticsearchRepositories(basePackages = "com.example.spring_elastic.Repository")//verifique o pacote fornecido em busca de repositórios Spring Data.
 public class Config {
 
-	@Bean
-	public RestHighLevelClient client(){
+	@Bean//método retorna um objeto a ser registrado como um Bean
+	public RestHighLevelClient client()//configuração da conexão com a API Elasticsearch Rest.
+	 {
 		ClientConfiguration clientConfiguration = ClientConfiguration.builder()
 				.connectedTo("localhost:9200")
 				//.withBasicAuth("elastic","SENHA AQUI") usuario e senha do servidor "elastic"

@@ -5,6 +5,9 @@ import com.example.spring_elastic.Repository.ArticleRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class ArticleService  implements IArticleService{
 
@@ -21,5 +24,22 @@ public class ArticleService  implements IArticleService{
 	@Override
 	public Article findById(int id) {
 		return repo.findById(id).get(); // execulta o findById do repo.
+	}
+
+	@Override
+	public List<Article> findAll() {
+		List<Article> list = new ArrayList<>(); //Article é uma lista de Article
+
+		Iterable<Article> resp = repo.findAll();//esta devolvendo um iterable e não uma lista
+
+		resp.forEach(list::add);//Para cada item ele chama o metodo ADD para adicionar a lista
+
+		return list;
+	}
+
+	@Override
+	public String deletebyId(int id) {
+		repo.deleteById(id);
+		return "Removido com Sucesso!"; //Retorno para o delete "opcional"
 	}
 }

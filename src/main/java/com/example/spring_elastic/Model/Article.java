@@ -9,12 +9,12 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import java.util.List;
 
-@Document(indexName = "meli_doc")
 @Getter
 @Setter
+@Document(indexName = "meli_doc") //indica que é um documento e o nome do mesmo http://localhost:9200/meli_doc
 public class Article {
 
-	@Id
+	@Id //usando a anotação ID
 	private int id;
 
 	//Podemos alterar o nome do campo do banco / FieldType: tipo do valor que o campo vai receber
