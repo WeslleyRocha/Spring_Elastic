@@ -26,6 +26,7 @@ curl --location --request POST 'localhost:8080/article' \
     ]
 }'
 ```
+<br><br>
 
 **PUT**
 ```
@@ -42,21 +43,25 @@ curl --location --request PUT 'localhost:8080/article/{id}' \
     ]
 }'
 ```
+<br><br>
 
 **GET (All)**
 ```
 curl --location --request GET 'localhost:8080/article'
 ```
+<br><br>
 
 **GET (byTitle)**
 ```
 curl --location --request GET 'localhost:8080/article/title/{title}'
 ```
+<br><br>
 
 **DELETE (ID)**
 ```
 curl --location --request DELETE 'localhost:8080/article/{id}'
 ```
+<br><br>
 
 **DELETE (ID V1)**
 ```
