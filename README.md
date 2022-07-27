@@ -1,5 +1,5 @@
 # Spring ElasticSearch
-API de estudo, consumindo bando de dados noSQL ElasticSearch.
+API de estudo Bootcamp Meli, consumindo bando de dados noSQL ElasticSearch.
 
 
 - **Endpoints**
